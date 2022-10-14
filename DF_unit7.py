@@ -37,6 +37,11 @@ def the_zip_function(first, last): # this is the zip function that zips through 
     
 the_zip_function(first, last) # this calls our function and passes in one tuple and one list as arguments
 
+# output
+# My name is: ('Jen', 'Brockway')
+# My name is: ('Blake', 'Brockway')
+# My name is: ('Hank', 'Brockway')
+# My name is: ('Hazel', 'Brockway')
 
 def the_enumerate_function(first): # this creates our enumerate function and passes in a tuple as a parameter
 
@@ -47,6 +52,12 @@ def the_enumerate_function(first): # this creates our enumerate function and pas
         # one and the value for each index
 
 the_enumerate_function(first) # this calls our function and passes in a tuple as an argument
+
+# output
+# Family order: 1 and name: Jen
+# Family order: 2 and name: Blake
+# Family order: 3 and name: Hank
+# Family order: 4 and name: Hazel
 
 def items_method(eye_color): # this defines our function and passes in a dictionary as a parameter
 
@@ -59,6 +70,12 @@ def items_method(eye_color): # this defines our function and passes in a diction
         # the value of eyes 
         
 items_method(Eye) # this is function call with out dictionary argument passed in
+
+# output
+# I am a: ('Girl', 'Blue') : is the color of my eyes.
+# I am a: ('Boy', 'Hazel') : is the color of my eyes.
+# I am a: ('LittleBoy', 'Green') : is the color of my eyes.
+# I am a: ('LittleGirl', 'Green') : is the color of my eyes.
 
 # references:
 
