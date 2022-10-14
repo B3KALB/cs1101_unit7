@@ -18,35 +18,52 @@
 
 # When you use information from a learning resource, such as a textbook, be sure to credit your source and include 
 # the URL. Continue to practice using APA format for citations and references.
-first = 'Jen', 'Blake', 'Hank', 'Hazel'
-last = ['Brockway', 'Brockway', 'Brockway', 'Brockway']
+
+first = 'Jen', 'Blake', 'Hank', 'Hazel' # first is the variable that defines my first name tuple
+last = ['Brockway', 'Brockway', 'Brockway', 'Brockway'] # last is the variable that defines the last name list
 Eye = {
     "Girl": "Blue",
     "Boy": "Hazel",
     "LittleBoy": "Green",
     "LittleGirl": "Green"
-}
+} # Eye is the name of the dictionary that we will use for the code below
 
-def the_zip_function(first, last):
-    for full_name in zip(first, last):
-        print(f'My name is: {full_name}')
+def the_zip_function(first, last): # this is the zip function that zips through two parameters that are passed in
+
+    for full_name in zip(first, last): # this is our for loop that does the heavy lifting and goes through our 
+        # tuple and list
+
+        print(f'My name is: {full_name}') # this displays our tuple value and our list value blended into one value
     
+the_zip_function(first, last) # this calls our function and passes in one tuple and one list as arguments
 
-the_zip_function(first, last)
 
-def the_enumerate_function(first):
-    for i,j in enumerate(first):
-        print(f'Family order: {(i + 1)} and name: {j}')
+def the_enumerate_function(first): # this creates our enumerate function and passes in a tuple as a parameter
 
-the_enumerate_function(first)
+    for i,j in enumerate(first): # this is our for loop that goes through the parameter and assigns an index to
+        #  each value
+    
+        print(f'Family order: {(i + 1)} and name: {j}') # this is our display that shows the index minipulated by 
+        # one and the value for each index
 
-def items_method(eye_color):
-    color = eye_color.items()
-    for eyes in color:
-        print(f'I am a: {eyes} : is the color of my eyes.')
+the_enumerate_function(first) # this calls our function and passes in a tuple as an argument
+
+def items_method(eye_color): # this defines our function and passes in a dictionary as a parameter
+
+    color = eye_color.items() # this assigns all of the items in out parameter to a value of color
+    
+    for eyes in color: # this is our for loop that goes through the items in color and assigns them to the value of 
+        # eye
+    
+        print(f'I am a: {eyes} : is the color of my eyes.') # here we display each item in our dictoinary through
+        # the value of eyes 
         
-items_method(Eye)
+items_method(Eye) # this is function call with out dictionary argument passed in
 
 # references:
 
-# https://greenteapress.com/thinkpython2/thinkpython2.pdf
+# https://greenteapress.com/thinkpython2/thinkpython2.pdf\
+
+#  https://realpython.com/python-enumerate/
+
+# https://www.programiz.com/python-programming/online-compiler/
