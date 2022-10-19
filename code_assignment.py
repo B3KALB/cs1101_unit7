@@ -2,37 +2,38 @@
 
 # Start with the following Python code.   
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"   
+alphabet = "abcdefghijklmnopqrstuvwxyz" # this is the variable that holds our aplhabet string to compare to
 
-test_dups = ["zzz","dog","bookkeeper","subdermatoglyphic","subdermatoglyphics"] 
+test_dups = ["zzz","dog","bookkeeper","subdermatoglyphic","subdermatoglyphics"] # this is the list assigned to the
+# variabvle test_dups that has three douplicates and two non-duplicates 
 
-test_miss = ["zzz","subdermatoglyphic","the quick brown fox jumps over the lazy dog"] 
+test_miss = ["zzz","subdermatoglyphic","the quick brown fox jumps over the lazy dog"]  # this is a list assigned to
+# the variable test_miss that has 3 strings, one duplicate string, one word, and one sentence
 
 # From Section 11.2 of: 
-
 # Downey, A. (2015). Think Python: How to think like a computer scientist. Needham, Massachusetts: Green Tree Press. 
+def histogram(s): # this is our function histogram being defined and takes a string as a parameter
+    d = dict() # this is our variable "d" that hods an empty dictionary in "= dict()" that is used to store data
+    for c in s: # this is our for loop that iterates through the string and "c" becomes our counter variable
+        if c not in d: # this is our if conditioanal statement that checks a negetive "in" against variable "d"
+            d[c] = 1 # this is the command that says if there isnt one, make one count
+        else: # this is the else condition
+            d[c] += 1 # this is the command that says if there is one, add another to count
+    return d  # this is the return statement that says, once the for loop is done, give back variable "d" 
 
-def histogram(s):
-     d = dict()
-     for c in s:
-          if c not in d:
-               d[c] = 1
-          else:
-               d[c] += 1
-     return d 
 
-# Copy the code above into your program but write all the other code for this assignment yourself. 
-# Do not copy any code from another source. 
 # Part 1
 # Write a function called has_duplicates that takes a string parameter and returns True if the string has any 
 # repeated characters. Otherwise, it should return False.  
 
-def has_duplicates(s):
-    h = histogram(s)
-    for i, j in h.items():
-        if j > 1:
-            return True
-    return False
+def has_duplicates(s): # this is the function being defined and takes a string as a parameter 
+    h = histogram(s) # this is where we call our function histogram, pass in the argument of string and assign 
+    # "h" as the variable name 
+    for i, j in h.items(): # this isour for loop that iterates through and finds the value of the items of "h"
+        if j > 1: # this is our if condition statement that says if the value of "j" is more than 1, do this
+            return True # this is boolean return statement that gives us the value of True
+    return False # this acts as both the else and the return giving back a value of False if the above condition
+    #  isn't met
 
 # Implement has_duplicates by creating a histogram using the histogram function above. 
 # Do not use any of the implementations of has_duplicates that are given in your textbook. 
@@ -46,22 +47,24 @@ def has_duplicates(s):
 # abc has no duplicates 
 
 # Print a line like one of the above for each of the strings in test_dups. 
-for s in test_dups:
-    if has_duplicates(s):
-        print(f"{s}: has duplicates")
-    else:
-        print(f"{s} : has no duplicates")
+
+for s in test_dups: # this is
+    if has_duplicates(s): # this is
+        print(f"{s}: has duplicates") # this is
+    else: # this is
+        print(f"{s} : has no duplicates") # this is
 
 # Part 2
 # Write a function called missing_letters that takes a string parameter and returns a new string with all the 
 # letters of the alphabet that are not in the argument string. 
-def missing_letters(s):
-    h = histogram(s)
-    new_words = []
-    for letter in alphabet:
-        if letter not in h:
-            new_words.append(letter)
-    return "".join(new_words)
+
+def missing_letters(s): # this is
+    h = histogram(s) # this is
+    new_words = [] # this is
+    for letter in alphabet: # this is
+        if letter not in h: # this is
+            new_words.append(letter) # this is
+    return "".join(new_words) # this is
 
 
 
@@ -84,12 +87,12 @@ def missing_letters(s):
 # abcdefghijklmnopqrstuvwxyz uses all the letters 
 
 # Print a line like one of the above for each of the strings in test_miss. 
-for s in test_miss:
-    new_words = missing_letters(s)
-    if len(new_words):
-        print(f"{s}: is missing letters: {new_words}")
-    else:
-        print(f"{s}: uses all the letters")
+for s in test_miss: # this is
+    new_words = missing_letters(s) # this is
+    if len(new_words): # this is
+        print(f"{s}: is missing letters: {new_words}") # this is
+    else: # this is
+        print(f"{s}: uses all the letters") # this is
 # Submit your Python program. It should include the following. 
 
 # The provided code for alphabet, test_dups, test_miss, and histogram. 
@@ -114,11 +117,11 @@ for s in test_miss:
 
 # output
 
-# zzz: has duplicates
-# dog : has no duplicates
-# bookkeeper: has duplicates
-# subdermatoglyphic : has no duplicates
-# subdermatoglyphics: has duplicates
-# zzz: is missing letters: abcdefghijklmnopqrstuvwxy
-# subdermatoglyphic: is missing letters: fjknqvwxz
-# the quick brown fox jumps over the lazy dog: uses all the letters
+# zzz: has duplicates # this is
+# dog : has no duplicates # this is
+# bookkeeper: has duplicates # this is
+# subdermatoglyphic : has no duplicates # this is
+# subdermatoglyphics: has duplicates # this is
+# zzz: is missing letters: abcdefghijklmnopqrstuvwxy # this is
+# subdermatoglyphic: is missing letters: fjknqvwxz # this is
+# the quick brown fox jumps over the lazy dog: uses all the letters # this is
