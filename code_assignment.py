@@ -34,12 +34,6 @@ def has_duplicates(s):
             return True
     return False
 
-for s in test_dups:
-    if has_duplicates(s):
-        print(s, ": has duplicates")
-    else:
-        print(s, ": has no duplicates")
-
 # Implement has_duplicates by creating a histogram using the histogram function above. 
 # Do not use any of the implementations of has_duplicates that are given in your textbook. 
 # Instead, your implementation should use the counts in the histogram to decide if there are any duplicates. 
@@ -52,10 +46,25 @@ for s in test_dups:
 # abc has no duplicates 
 
 # Print a line like one of the above for each of the strings in test_dups. 
+for s in test_dups:
+    if has_duplicates(s):
+        print(f"{s}: has duplicates")
+    else:
+        print(f"{s} : has no duplicates")
 
 # Part 2
 # Write a function called missing_letters that takes a string parameter and returns a new string with all the 
 # letters of the alphabet that are not in the argument string. 
+def missing_letters(s):
+    h = histogram(s)
+    new_words = []
+    for letter in alphabet:
+        if letter not in h:
+            new_words.append(letter)
+    return "".join(new_words)
+
+
+
 # The letters in the returned string should be in alphabetical order. 
 
 # Your implementation should use a histogram from the histogram function. 
@@ -75,7 +84,12 @@ for s in test_dups:
 # abcdefghijklmnopqrstuvwxyz uses all the letters 
 
 # Print a line like one of the above for each of the strings in test_miss. 
-
+for s in test_miss:
+    new_words = missing_letters(s)
+    if len(new_words):
+        print(f"{s}: is missing letters: {new_words}")
+    else:
+        print(f"{s}: uses all the letters")
 # Submit your Python program. It should include the following. 
 
 # The provided code for alphabet, test_dups, test_miss, and histogram. 
@@ -97,3 +111,14 @@ for s in test_dups:
 # Does the program include a loop over the strings in test_miss that calls missing_letters on each string?
 # Does the program correctly identify the missing letters for each string in test_miss, including each string 
 # that "uses all the letters"?
+
+# output
+
+# zzz: has duplicates
+# dog : has no duplicates
+# bookkeeper: has duplicates
+# subdermatoglyphic : has no duplicates
+# subdermatoglyphics: has duplicates
+# zzz: is missing letters: abcdefghijklmnopqrstuvwxy
+# subdermatoglyphic: is missing letters: fjknqvwxz
+# the quick brown fox jumps over the lazy dog: uses all the letters
