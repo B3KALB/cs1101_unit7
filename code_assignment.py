@@ -60,13 +60,20 @@ for s in test_miss: # this is the for loop that iterates through "test_miss" and
    else: # this is the default response that says if "new_words" has no length, then do this
        print(f"{s}: uses all the letters") # this is our display that shows the value of the variable "s"
 
-# outputs
+# Part1 outputs
 
-# zzz: has duplicates # this is
-# dog : has no duplicates # this is
-# bookkeeper: has duplicates # this is
-# subdermatoglyphic : has no duplicates # this is
-# subdermatoglyphics: has duplicates # this is
-# zzz: is missing letters: abcdefghijklmnopqrstuvwxy # this is
-# subdermatoglyphic: is missing letters: fjknqvwxz # this is
-# the quick brown fox jumps over the lazy dog: uses all the letters # this is
+# zzz: has duplicates # this is the result of the function "has_duplicates(s)" and the pt1 for loop
+# dog : has no duplicates # this is the result of the function "has_duplicates(s)" and the pt1 for loop
+# bookkeeper: has duplicates # this is the result of the function "has_duplicates(s)" and the pt1 for loop
+# subdermatoglyphic : has no duplicates # this is the result of the function "has_duplicates(s)" and the pt1 for 
+# loop
+# subdermatoglyphics: has duplicates # this is the result of the function "has_duplicates(s)" and the pt1 for loop
+
+# Part2 outputs
+
+# zzz: is missing letters: abcdefghijklmnopqrstuvwxy # this is the result of the function "missing_letters(s)" and 
+# the pt2 for loop
+# subdermatoglyphic: is missing letters: fjknqvwxz # this is the result of the function "missing_letters(s)" and 
+# the pt2 for loop
+# the quick brown fox jumps over the lazy dog: uses all the letters # this is the result of the function 
+# "missing_letters(s)" and the pt2 for loop
