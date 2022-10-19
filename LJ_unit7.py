@@ -22,8 +22,8 @@ dicky= {
 }
 
 def original_dict(d):
-    dic_items = d.items()
-    print(dic_items)
+    dict_items = d.items()
+    print(dict_items)
 original_dict(dicky)
 
 def invert_dict(d):
