@@ -21,16 +21,17 @@ def original_dict(d): # this is the function that returns our original dictionar
     print(dict_items) # this is the display statement to show the items in our parameter
 original_dict(dicky) # this is the function call with the argument of "dicky" passed in
 
-def invert_dict(d): # this is the
-    inverse = dict() # this is the
-    for key in d: # this is the
-        val = d[key] # this is the
-        if val not in inverse: # this is the
-            inverse[val] = [key] # this is the
-        else: # this is the
-            inverse[val].append(key) # this is the
-    print(f"dict_inverse({inverse})")  # this is the
-invert_dict(dicky) # this is the
+def invert_dict(d): # this is the function of "invert_dict" that takes a parameter of "d"
+    inverse = dict() # this is the variable of "inverse" that holds an empty dictionary as it's value
+    for key in d: # this is the for loop that iterates through our parameter and the counter is "key"
+        val = d[key] # this is the variable of "val" that holds the value of the perameter at the index 
+        if val not in inverse: # this is the conditional statement that says if "val" is not in "inverse", do this
+            inverse[val] = [key] # this is the "inverse" value that takes the old key and makes it the new value
+        else: # this is the default conditional that says if the above isnt saticfied, do tihs
+            inverse[val].append(key) # this is the "inverse" value that uses .append method to make the value the 
+            # new key 
+    print(f"dict_inverse({inverse})")  # this is thedisplay statement that show the inverted dictionary
+invert_dict(dicky) # this is thefuction call that passes in the argument of or original dictionnary
 
 # outputs
 # dict_items([('key1', 'zero'), ('key2', 'one'), ('key3', 2), ('key4', 'three'), ('key5', '4'), (6, 5), ('7', 'six')])
